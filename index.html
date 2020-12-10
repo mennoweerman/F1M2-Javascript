@@ -1,20 +1,18 @@
-    <!doctype html>
-    <html>
-    <head>
-      <meta charset="utf-8">
-      <title>Goedemorgen</title>
-    </head>
-    
-    <body>
-      <h1>Tijd met javaScript</h1>
-      <input type="button" value="click me!" id="mijnButton"/>
-      <script>
-       let mijnButton = document.getElementById('mijnButton');
-       let datum = new Date();//datum is de date
-       mijnButton.addEventListener('click', ()=>{
-       window.alert(datum + " Welkom, Ik ben Menno Weerman en ben een student op het Media college")
-       })
-       
-      </script>
-    </body>
-    </html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+   <body>
+    <a-scene>
+    <a-assets>
+      <img id="stone" src="https://i.imgur.com/mYmmbrp.jpg">
+    </a-assets>
+      <a-cone  position="-1 0.5 -3" color="tomato" radius-bottom="1" radius-top="0"></a-cone>
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-box src="#stone" position="1 0.75 -3" radius="0.5" height="0.75" color="#FFC65D" animation="property: object3D.position.y; to: 2; dir: alternate; dur: 2000; loop: true"></a-box>>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#556B2F" ></a-plane>
+      <a-sky color="#00D5FF"></a-sky>
+      <a-text value="Hey, Mediacollege Amsterdam" position="-1,5 2 -2" color="EFC65D" size="0,5"></a-text>
+    </a-scene>
+  </body>
+</html>
